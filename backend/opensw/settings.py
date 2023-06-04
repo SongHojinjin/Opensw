@@ -32,7 +32,8 @@ SITE_ID = 1
 # Application definition
 ASGI_APPLICATION = "opensw.asgi.application"
 INSTALLED_APPS = [
-    "daphne",
+    'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

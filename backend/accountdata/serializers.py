@@ -57,3 +57,9 @@ class CustomRegisterSerializer(RegisterSerializer):
         #내가 정의한 모델 appuser를 사용해서 회원가입을 커스텀마이즈 할거임을 알리는 부분?
         model = appuser
         fields = ('email', 'password', 'realname', 'age', 'major', 'gender', 'phone')
+
+class AppUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = appuser
+        fields = ('id', 'email', 'realname', 'age', 'major', 'gender', 'phone')
+        read_only_fields = ('id',)
